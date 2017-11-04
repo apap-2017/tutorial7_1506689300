@@ -9,16 +9,16 @@ public interface StudentService
 {
     StudentModel selectStudent (String npm);
     
-    CourseModel selectCourse (String id_course);
-
     List<StudentModel> selectAllStudents ();
-
 
     void addStudent (StudentModel student);
 
-
     void deleteStudent (String npm);
     
-    
     void updateStudent (StudentModel student);
+    
+    
+    CourseModel selectCourse (String id_course);
+    
+    List<CourseModel> selectAllCourses ();
 }

@@ -25,13 +25,6 @@ public class StudentServiceDatabase implements StudentService
         log.info ("select student with npm {}", npm);
         return studentMapper.selectStudent (npm);
     }
-    
-    @Override
-    public CourseModel selectCourse (String id_course)
-    {
-        log.info ("select course with id {}", id_course);
-        return studentMapper.selectCourse(id_course);
-    }
 
 
     @Override
@@ -61,5 +54,19 @@ public class StudentServiceDatabase implements StudentService
     	log.info ("student " + student + " update");
     	studentMapper.updateStudent(student);
     }
-
+    
+    @Override
+    public CourseModel selectCourse (String id_course)
+    {
+        log.info ("select course with id {}", id_course);
+        return studentMapper.selectCourse(id_course);
+    }
+    
+    
+    @Override
+    public List<CourseModel> selectAllCourses ()
+    {
+        log.info ("select all courses");
+        return studentMapper.selectAllCourses ();
+    }
 }
